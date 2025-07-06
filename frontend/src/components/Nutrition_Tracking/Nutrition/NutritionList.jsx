@@ -31,13 +31,13 @@ function NutritionList() {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem('token'); 
-        const nutritionResponse = await axios.get('http://localhost:3000/nutrition/',{
+        const nutritionResponse = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/nutrition/',{
           headers: {
             Authorization: `Bearer ${token}` 
           }
         });
         setNutritions(nutritionResponse.data);
-        const mealTypesResponse = await axios.get('http://localhost:3000/type/mealTypes',{
+        const mealTypesResponse = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes',{
           headers: {
             Authorization: `Bearer ${token}` 
           }
@@ -56,7 +56,7 @@ function NutritionList() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token'); 
-      await axios.delete(`http://localhost:3000/nutrition/${id}`,{
+      await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/nutrition/${id}`,{
         headers: {
           Authorization: `Bearer ${token}` 
         }
