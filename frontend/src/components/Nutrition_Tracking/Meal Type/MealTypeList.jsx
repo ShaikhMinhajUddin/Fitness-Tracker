@@ -29,7 +29,7 @@ const MealTypeList = () => {
   const fetchMealTypes = async () => {
     try {
       const token = localStorage.getItem('token'); 
-      const response = await axios.get('http://localhost:3000/type/mealTypes',{
+      const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes',{
         headers: {
           Authorization: `Bearer ${token}` // Include token in headers
         }
@@ -45,7 +45,7 @@ const MealTypeList = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token'); 
-      await axios.delete(`http://localhost:3000/type/mealTypes/${id}`,{
+      await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes/${id}`,{
         headers: {
           Authorization: `Bearer ${token}` // Include token in headers
         }
