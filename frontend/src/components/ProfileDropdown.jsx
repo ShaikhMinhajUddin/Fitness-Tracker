@@ -36,7 +36,7 @@ const ProfileDropdown = () => {
   };
 
   const imageSrc = user?.profileImage
-    ? `http://localhost:3000/${user.profileImage}`
+    ? `https://fitness-tracker-production-ba8c.up.railway.app/${user.profileImage}`
     : `https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg`;
 
   return (
