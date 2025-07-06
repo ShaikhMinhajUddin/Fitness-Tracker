@@ -49,7 +49,7 @@ const MainReminder = () => {
   const fetchGoals = async () => {
     try {
       const token = localStorage.getItem('token'); 
-      const response = await axios.get('http://localhost:3000/gl/goals',{
+      const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/gl/goals',{
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -65,7 +65,7 @@ const MainReminder = () => {
     const newReminder = { type, date, message: `Time for your ${type}!` };
     try {
       const token = localStorage.getItem('token'); 
-      await axios.post('http://localhost:3000/remind/reminders', newReminder,{
+      await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/remind/reminders', newReminder,{
         headers: {
           Authorization: `Bearer ${token}` 
         }
@@ -85,7 +85,7 @@ const MainReminder = () => {
       const token = localStorage.getItem('token');
       
       // Check if a goal with the same name exists for the user
-      const existingGoalsResponse = await axios.get('http://localhost:3000/gl/goals', {
+      const existingGoalsResponse = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/gl/goals', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -103,7 +103,7 @@ const MainReminder = () => {
       }
   
       // If no existing goal with the same name, proceed to add the new goal
-      const response = await axios.post('http://localhost:3000/gl/goals', newGoal, {
+      const response = await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/gl/goals', newGoal, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -125,7 +125,7 @@ const MainReminder = () => {
   const handleDeleteGoal = async (goalId) => {
     try {
       const token = localStorage.getItem('token'); 
-      await axios.delete(`http://localhost:3000/gl/goals/${goalId}`,{
+      await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/gl/goals/${goalId}`,{
         headers: {
           Authorization: `Bearer ${token}` 
         }
