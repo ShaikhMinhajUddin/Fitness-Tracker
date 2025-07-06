@@ -19,7 +19,7 @@ const CreateMealType = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token'); 
-      await axios.post('http://localhost:3000/type/mealTypes', { name },{
+      await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes', { name },{
         headers: {
           Authorization: `Bearer ${token}` 
         }
