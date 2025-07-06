@@ -14,22 +14,22 @@ const Dashboard = () => {
     try {
       const token = localStorage.getItem('token'); 
       const [routineResponse, categoriesResponse, tagsResponse, nutritionResponse] = await Promise.all([
-        axios.get('http://localhost:3000/r/',{
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/r/',{
           headers: {
             Authorization: `Bearer ${token}` 
           }
         }),
-        axios.get('http://localhost:3000/api/categories',{
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/api/categories',{
           headers: {
             Authorization: `Bearer ${token}` 
           }
         }),
-        axios.get('http://localhost:3000/t/tag',{
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/t/tag',{
           headers: {
             Authorization: `Bearer ${token}` 
           }
         }),
-        axios.get('http://localhost:3000/nutrition/',{
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/nutrition/',{
           headers: {
             Authorization: `Bearer ${token}` 
           }
