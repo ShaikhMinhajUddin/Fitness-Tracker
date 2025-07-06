@@ -28,7 +28,7 @@ function CreateProgress() {
     const handleAddProgress = (event) => {
         const token = localStorage.getItem('token');
         event.preventDefault();
-        axios.post('http://localhost:3000/progress', newProgress,{
+        axios.post('https://fitness-tracker-production-ba8c.up.railway.app/progress', newProgress,{
             headers: {
               Authorization: `Bearer ${token}` 
             }
