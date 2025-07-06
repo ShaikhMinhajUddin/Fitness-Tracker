@@ -24,7 +24,7 @@ function EditProgress() {
 
     const fetchData = () => {
         const token = localStorage.getItem('token');
-        axios.get(`http://localhost:3000/progress/${id}`,{
+        axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/progress/${id}`,{
             headers: {
               Authorization: `Bearer ${token}` 
             }
@@ -47,7 +47,7 @@ function EditProgress() {
         e.preventDefault();
         try {
             const token = localStorage.getItem('token');
-            await axios.put(`http://localhost:3000/progress/${id}`, formData,{
+            await axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/progress/${id}`, formData,{
                 headers: {
                   Authorization: `Bearer ${token}` 
                 }
