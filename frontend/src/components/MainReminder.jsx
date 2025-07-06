@@ -34,7 +34,7 @@ const MainReminder = () => {
 
   const fetchReminders = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/remind/reminders/${userId}`, {
+      const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/remind/reminders/${userId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
