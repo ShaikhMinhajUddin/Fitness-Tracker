@@ -21,7 +21,7 @@ function CreateNutrition() {
 
   useEffect(() => {
     const token = localStorage.getItem('token'); 
-    axios.get('http://localhost:3000/type/mealTypes',{
+    axios.get('https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes',{
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ function CreateNutrition() {
     const token = localStorage.getItem('token'); 
     e.preventDefault();
     
-    axios.post('http://localhost:3000/nutrition/', formData,{
+    axios.post('https://fitness-tracker-production-ba8c.up.railway.app/nutrition/', formData,{
       headers: {
         Authorization: `Bearer ${token}` 
       }
