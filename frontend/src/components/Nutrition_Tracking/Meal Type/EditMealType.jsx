@@ -17,7 +17,7 @@ const EditMealType = () => {
   const fetchMealType = async () => {
     try {
       const token = localStorage.getItem('token'); 
-      const response = await axios.get(`http://localhost:3000/type/mealTypes/${id}`,{
+      const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes/${id}`,{
         headers: {
           Authorization: `Bearer ${token}` 
         }
@@ -38,7 +38,7 @@ const EditMealType = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem('token'); 
-      await axios.put(`http://localhost:3000/type/mealTypes/${id}`, { name },{
+      await axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes/${id}`, { name },{
         headers: {
           Authorization: `Bearer ${token}` 
         }
