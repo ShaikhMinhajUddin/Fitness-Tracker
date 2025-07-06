@@ -27,12 +27,12 @@ const RoutineList = () => {
             Authorization: `Bearer ${token}` // Include token in headers
           }
         }),
-        axios.get('http://localhost:3000/api/categories', {
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/api/categories', {
           headers: {
             Authorization: `Bearer ${token}` // Include token in headers
           }
         }),
-        axios.get('http://localhost:3000/t/tag', {
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/t/tag', {
           headers: {
             Authorization: `Bearer ${token}` // Include token in headers
           }
