@@ -22,7 +22,7 @@ const RoutineList = () => {
     try {
       const token = localStorage.getItem('token');
       const [routineResponse, categoriesResponse, tagsResponse] = await Promise.all([
-        axios.get('http://localhost:3000/r/', {
+        axios.get('https://fitness-tracker-production-ba8c.up.railway.app/r/', {
           headers: {
             Authorization: `Bearer ${token}` // Include token in headers
           }
@@ -69,7 +69,7 @@ const RoutineList = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3000/r/${id}`, {
+      await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/r/${id}`, {
         headers: {
           Authorization: `Bearer ${token}` 
         }
