@@ -15,7 +15,7 @@ const EditTag = () => {
   useEffect(() => {
     const fetchTag = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/t/${id}`,{
+        const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/t/${id}`,{
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -34,7 +34,7 @@ const EditTag = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/t/${id}`, { name: tagName },{
+      await axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/t/${id}`, { name: tagName },{
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
