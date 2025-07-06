@@ -16,7 +16,7 @@ function CategoryEdit() {
     const fetchCategory = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:3000/api/${id}`, {
+        const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/api/${id}`, {
           headers: {
             Authorization: `Bearer ${token}` // Include token in the Authorization header
           }
@@ -36,7 +36,7 @@ function CategoryEdit() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:3000/api/${id}`, category, {
+      await axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/api/${id}`, category, {
         headers: {
           Authorization: `Bearer ${token}` // Include token in the Authorization header
         }
