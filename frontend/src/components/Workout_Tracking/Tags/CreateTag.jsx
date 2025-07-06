@@ -14,7 +14,7 @@ function CreateTag() {
     const fetchCategories = async () => {
       try {
         const token = localStorage.getItem('token'); 
-        const response = await axios.get('http://localhost:3000/api/categories', {
+        const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/api/categories', {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ function CreateTag() {
     try {
       const token = localStorage.getItem('token'); 
 
-      const response = await axios.post('http://localhost:3000/t/post', {
+      const response = await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/t/post', {
         name: tagName,
         categoryId: selectedCategory,
       }, {
