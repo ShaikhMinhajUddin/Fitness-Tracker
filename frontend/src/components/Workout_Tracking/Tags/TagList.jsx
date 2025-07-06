@@ -42,7 +42,7 @@ const TagList = () => {
       try {
         const token = localStorage.getItem('token'); 
 
-        const response = await axios.get('http://localhost:3000/t/tag', {
+        const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/t/tag', {
           headers: {
             Authorization: `Bearer ${token}` // Include token in the Authorization header
           }
@@ -64,7 +64,7 @@ const TagList = () => {
       if (tags.length > 0) {
         try {
           const categoryPromises = tags.map(tag =>
-            axios.get(`http://localhost:3000/api/${tag.categoryId}`, {
+            axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/api/${tag.categoryId}`, {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
               }
@@ -108,7 +108,7 @@ const TagList = () => {
     try {
       // Retrieve the token from local storage or wherever it's stored
 
-      await axios.delete(`http://localhost:3000/t/${tagId}`, {
+      await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/t/${tagId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
