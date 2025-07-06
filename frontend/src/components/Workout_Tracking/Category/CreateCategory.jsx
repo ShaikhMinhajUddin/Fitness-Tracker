@@ -14,7 +14,7 @@ function CreateCategory({ onCreate }) {
     try {
       const token = localStorage.getItem('token');
       await axios.post(
-        'http://localhost:3000/api/categories',
+        'https://fitness-tracker-production-ba8c.up.railway.app/api/categories',
         { name: categoryName },
         {
           headers: {
