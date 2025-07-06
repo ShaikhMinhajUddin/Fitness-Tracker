@@ -6,7 +6,7 @@ const Profile = () => {
     const [users, setUsers] = useState([]);
     
     useEffect(() => {
-        axios.get("http://localhost:3000/user/get")
+        axios.get("https://fitness-tracker-production-ba8c.up.railway.app/user/get")
             .then((res) => {
                 console.log("API Response:", res.data); // Log API response
                 setUsers(res.data);
@@ -30,7 +30,7 @@ const Profile = () => {
                         <div className="mb-4">
                             {/*   <p>Image URL: {`http://localhost:3000/${user.profileImage}`}</p> Log image URL */}
                             <img
-                                src={`http://localhost:3000/${user.profileImage}`}
+                                src={`https://fitness-tracker-production-ba8c.up.railway.app/${user.profileImage}`}
                                 alt='Image'
                                 className="w-48 h-48 object-cover "
                             />
