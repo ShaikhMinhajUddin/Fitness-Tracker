@@ -29,7 +29,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:3000/user/login', formData);
+      const res = await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/user/login', formData);
       const { token, user } = res.data;
       login(user, token);
 
