@@ -1,0 +1,50 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .border {
+    border: 1px solid #ccc;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  
+  .bg-green-500 {
+    background-color: #48bb78;
+  }
+  
+  .hover\:bg-green-700:hover {
+    background-color: #2f855a;
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,28 @@
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+.hover\:underline-offset-8:hover {
+  text-decoration-thickness: 2px; /* Adjust the thickness if needed */
+  text-underline-offset: 8px; /* Adjust the offset if needed */
+}
+
+.primary-btn {
+  background-color: #ff9900; /* Replace with your primary color */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px; /* Fully rounded button */
+  transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #ff9900; /* Slightly darker shade for hover */
+}
+
+/* Style for active link */
+.active-link {
+  color: #ff9900; /* Replace with your active color */
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
