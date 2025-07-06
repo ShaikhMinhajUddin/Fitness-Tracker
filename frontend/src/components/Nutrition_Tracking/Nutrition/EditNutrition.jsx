@@ -23,7 +23,7 @@ function EditNutrition() {
   useEffect(() => {
     const token = localStorage.getItem('token'); 
     // Fetch the nutrition entry to be edited
-    axios.get(`http://localhost:3000/nutrition/${id}`,{
+    axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/nutrition/${id}`,{
       headers: {
         Authorization: `Bearer ${token}` 
       }
@@ -38,7 +38,7 @@ function EditNutrition() {
       });
      
     // Fetch meal types
-    axios.get('http://localhost:3000/type/mealTypes',{
+    axios.get('https://fitness-tracker-production-ba8c.up.railway.app/type/mealTypes',{
       headers: {
         Authorization: `Bearer ${token}` 
       }
@@ -60,7 +60,7 @@ function EditNutrition() {
     const token = localStorage.getItem('token'); 
     e.preventDefault();
 
-    axios.put(`http://localhost:3000/nutrition/${id}`, nutrition,{
+    axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/nutrition/${id}`, nutrition,{
       headers: {
         Authorization: `Bearer ${token}` 
       }
