@@ -20,7 +20,7 @@ function CreateRoutine() {
     const fetchCategories = async () => {
       try {
         const token = localStorage.getItem('token'); // Retrieve the token from localStorage
-        const response = await axios.get('http://localhost:3000/api/categories', {
+        const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/api/categories', {
           headers: {
             Authorization: `Bearer ${token}` // Pass the token in the Authorization header
           }
@@ -39,7 +39,7 @@ function CreateRoutine() {
       if (selectedCategory) {
         try {
           const token = localStorage.getItem('token'); // Retrieve the token from localStorage
-          const response = await axios.get(`http://localhost:3000/t/tags/${selectedCategory}`, {
+          const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/t/tags/${selectedCategory}`, {
             headers: {
               Authorization: `Bearer ${token}` // Pass the token in the Authorization header
             }
@@ -74,7 +74,7 @@ function CreateRoutine() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token'); // Retrieve the token from localStorage
-      const response = await axios.post('http://localhost:3000/r/post', {
+      const response = await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/r/post', {
         name: routineName,
         category: selectedCategory,
         tags: selectedTags,
