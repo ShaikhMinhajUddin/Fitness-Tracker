@@ -29,7 +29,7 @@ function ProgressList() {
         try {
             const token = localStorage.getItem('token');
             setError(null);
-            const response = await axios.get('http://localhost:3000/progress/', {
+            const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/progress/', {
                 headers: {
                   Authorization: `Bearer ${token}` // Include token in headers
                 }
@@ -46,7 +46,7 @@ function ProgressList() {
     const handleDelete = async (id) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:3000/progress/${id}`, {
+            await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/progress/${id}`, {
                 headers: {
                   Authorization: `Bearer ${token}` // Include token in headers
                 }
