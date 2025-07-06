@@ -19,7 +19,7 @@ const EditRoutine = () => {
       const fetchRoutine = async () => {
         try {
           const token = localStorage.getItem('token');
-          const response = await axios.get(`http://localhost:3000/r/${id}`, {
+          const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/r/${id}`, {
             headers: {
               Authorization: `Bearer ${token}` 
             }
@@ -40,7 +40,7 @@ const EditRoutine = () => {
       const fetchCategories = async () => {
         try {
           const token = localStorage.getItem('token');
-          const response = await axios.get('http://localhost:3000/api/categories', {
+          const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/api/categories', {
             headers: {
               Authorization: `Bearer ${token}` 
             }
@@ -59,7 +59,7 @@ const EditRoutine = () => {
         if (routine?.category) {
           try {
             const token = localStorage.getItem('token');
-            const response = await axios.get(`http://localhost:3000/t/tags/${routine.category}`, {
+            const response = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/t/tags/${routine.category}`, {
               headers: {
                 Authorization: `Bearer ${token}` 
               }
@@ -78,7 +78,7 @@ const EditRoutine = () => {
       e.preventDefault();
       try {
         const token = localStorage.getItem('token');
-        await axios.put(`http://localhost:3000/r/${id}`, {
+        await axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/r/${id}`, {
           ...routine,
           tags: selectedTags,
         }, {
