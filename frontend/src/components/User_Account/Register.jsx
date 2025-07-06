@@ -59,7 +59,7 @@ const Register = () => {
         data.append('profileImage', formData.profileImage);
 
         try {
-            const res = await axios.post('http://localhost:3000/user/create/', data, {
+            const res = await axios.post('https://fitness-tracker-production-ba8c.up.railway.app/user/create/', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
