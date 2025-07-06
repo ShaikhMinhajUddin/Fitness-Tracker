@@ -20,7 +20,7 @@ function CategoryList() {
       setLoading(true);
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3000/api/categories', {
+        const response = await axios.get('https://fitness-tracker-production-ba8c.up.railway.app/api/categories', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setCategories(response.data);
@@ -45,7 +45,7 @@ function CategoryList() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3000/api/${id}`, {
+      await axios.delete(`https://fitness-tracker-production-ba8c.up.railway.app/api/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCategories(categories.filter(category => category._id !== id));
