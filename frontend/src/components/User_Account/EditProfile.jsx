@@ -20,7 +20,7 @@ const EditProfile = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/user/users/${userId}`);
+                const res = await axios.get(`https://fitness-tracker-production-ba8c.up.railway.app/user/users/${userId}`);
                 const { username, email, profileImage } = res.data;
                 setFormData({
                     username: username || '',
@@ -28,7 +28,7 @@ const EditProfile = () => {
                     password: '', // Do not pre-fill password for security reasons
                     profileImage: profileImage || ''
                 });
-                setPreview(profileImage ? `http://localhost:3000/${profileImage}` : '');
+                setPreview(profileImage ? `https://fitness-tracker-production-ba8c.up.railway.app/${profileImage}` : '');
             } catch (err) {
                 console.error('Error fetching user data:', err);
             }
@@ -62,7 +62,7 @@ const EditProfile = () => {
         data.append('profileImage', formData.profileImage);
 
         try {
-            const res = await axios.put(`http://localhost:3000/user/users/${userId}`, data, {
+            const res = await axios.put(`https://fitness-tracker-production-ba8c.up.railway.app/user/users/${userId}`, data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
